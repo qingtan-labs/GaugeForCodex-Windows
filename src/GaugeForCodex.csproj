@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType><TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF><UseWindowsForms>true</UseWindowsForms><Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings><EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <AssemblyName>GaugeForCodex</AssemblyName><RootNamespace>GaugeForCodex</RootNamespace>
+    <Version>$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\..\VERSION').Trim())</Version><ApplicationIcon>..\assets\app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Using Remove="System.Windows.Forms" /><Using Remove="System.Drawing" />
+    <None Include="..\assets\app.ico;..\assets\tray.ico;..\assets\tray-light.ico;..\assets\app-icon.png" Link="Assets\%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    <None Include="..\scripts\apply-update.ps1" Link="apply-update.ps1" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

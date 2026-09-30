@@ -1,0 +1,10 @@
+<Application x:Class="GaugeForCodex.App" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ShutdownMode="OnExplicitShutdown">
+  <Application.Resources>
+    <!-- WPF's focus adorner appears for keyboard navigation, not mouse clicks. -->
+    <Style x:Key="{x:Static SystemParameters.FocusVisualStyleKey}" TargetType="Control">
+      <Setter Property="Template"><Setter.Value><ControlTemplate TargetType="Control">
+        <Border BorderBrush="#859388" BorderThickness="1" CornerRadius="8" Margin="2" IsHitTestVisible="False"/>
+      </ControlTemplate></Setter.Value></Setter>
+    </Style>
+  </Application.Resources>
+</Application>

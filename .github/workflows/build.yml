@@ -1,0 +1,29 @@
+name: Windows build and regression tests
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        runtime: [win-x64, win-arm64]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Build, test and package
+        shell: pwsh
+        run: ./scripts/build-release.ps1 -Runtime ${{ matrix.runtime }}
+      - name: Extract and verify package resources
+        shell: pwsh
+        run: ./scripts/verify-release.ps1 -Runtime ${{ matrix.runtime }}
+      - name: Upload verified package
+        uses: actions/upload-artifact@v4
+        with:
+          name: GaugeForCodex-${{ matrix.runtime }}
+          path: dist/*

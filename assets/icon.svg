@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="surface" x1="90" y1="48" x2="420" y2="468" gradientUnits="userSpaceOnUse"><stop stop-color="#263A50"/><stop offset="1" stop-color="#242940"/></linearGradient>
+    <linearGradient id="quota" x1="110" y1="390" x2="405" y2="100" gradientUnits="userSpaceOnUse"><stop stop-color="#35C8DF"/><stop offset="1" stop-color="#89DDB1"/></linearGradient>
+  </defs>
+  <rect x="32" y="32" width="448" height="448" rx="112" fill="url(#surface)"/>
+  <rect x="33" y="33" width="446" height="446" rx="111" fill="none" stroke="#FFFFFF" stroke-opacity=".15" stroke-width="2"/>
+  <path d="M149 355 A146 146 0 1 1 363 355" fill="none" stroke="#FFFFFF" stroke-opacity=".13" stroke-width="12" stroke-linecap="round"/>
+  <path d="M149 355 A146 146 0 1 1 382 182" fill="none" stroke="url(#quota)" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="382" cy="182" r="7" fill="#93E0B9"/>
+  <path d="M317 195 A86 86 0 1 0 317 317" fill="none" stroke="#F8FAFC" stroke-width="26" stroke-linecap="round"/>
+  <path d="M226 230 L255 256 L226 282 M280 282 H309" fill="none" stroke="#8CDBE0" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

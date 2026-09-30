@@ -1,0 +1,9 @@
+**/bin/
+**/obj/
+**/Data/
+artifacts/
+dist/
+*.user
+*.suo
+*.log
+*.tmp

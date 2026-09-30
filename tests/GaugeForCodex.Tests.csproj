@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><OutputType>Exe</OutputType><TargetFramework>net8.0</TargetFramework><Nullable>enable</Nullable><ImplicitUsings>enable</ImplicitUsings><Version>$([System.IO.File]::ReadAllText('$(MSBuildProjectDirectory)\..\VERSION').Trim())</Version></PropertyGroup>
+  <ItemGroup><Compile Include="..\src\QuotaClient.cs;..\src\AppState.cs;..\src\Text.cs;..\src\UpdateClient.cs" Link="%(Filename)%(Extension)"/></ItemGroup>
+</Project>
